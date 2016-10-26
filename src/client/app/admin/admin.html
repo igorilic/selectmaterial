@@ -7,7 +7,12 @@
           <div class="widget-content user">
             <md-input-container>
               <label>Columns</label>
-              <md-select ng-model="vm.selectedColumns" multiple>
+              <md-select
+                ng-model="vm.selectedColumns"
+                md-no-asterisk="true"
+                multiple
+                md-selected-text="vm.selectedText"
+                md-on-close="vm.onClose(vm.selectedColumns)">
                 <md-option ng-repeat="column in vm.columns" value="{{column}}">{{column}}</md-option>
               </md-select>
             </md-input-container>

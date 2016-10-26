@@ -15,12 +15,17 @@
       'Address',
       'Name'
     ];
+    vm.selectedText = 'Columns';
     vm.selectedColumns = [];
     vm.printSelectedColumns = function() {
       var numberofcols = vm.selectedColumns.length;
       if(numberofcols > 0) {
         return vm.selectedColumns.join(', ');
       }
+    };
+
+    vm.onClose = function(value) {
+      alert(value);
     };
     activate();
 
