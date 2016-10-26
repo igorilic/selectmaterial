@@ -1,0 +1,24 @@
+<section class="mainbar">
+  <section class="matter">
+    <div class="container">
+      <div class="row">
+        <div class="widget wviolet">
+          <div ht-widget-header title="{{vm.title}}"></div>
+          <div class="widget-content user">
+            <md-input-container>
+              <label>Columns</label>
+              <md-select ng-model="vm.selectedColumns" multiple>
+                <md-option ng-repeat="column in vm.columns" value="{{column}}">{{column}}</md-option>
+              </md-select>
+            </md-input-container>
+            <p ng-if="vm.selectedColumns">You ordered columns: {{vm.printSelectedColumns()}}.</p>
+          </div>
+          </div>
+          <div class="widget-foot">
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
