@@ -9,7 +9,7 @@
   /* @ngInject */
   function AdminController(logger) {
     var vm = this;
-    vm.title = 'Admin';
+    vm.title = 'Multiple select test';
     vm.columns = [
       'Id',
       'Address',
@@ -18,8 +18,8 @@
     vm.selectedColumns = [];
     vm.printSelectedColumns = function() {
       var numberofcols = vm.selectedColumns.length;
-      if(numberofcols > 1) {
-        return vm.selectedColumns.slice(0, -1).join(', ');
+      if(numberofcols > 0) {
+        return vm.selectedColumns.join(', ');
       }
     };
     activate();
